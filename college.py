@@ -24,7 +24,7 @@ df['Answer'] = df['Answer'].str.lower()
 vectorizer = TfidfVectorizer()
 question_vectors = vectorizer.fit_transform(df['Question'])
 
-API_KEY ="AIzaSyBZnlpanyhyGnfEyi4XNTCAj2ledAi_1PI"
+API_KEY = "AIzaSyBZnlpanyhyGnfEyi4XNTCAj2ledAi_1PI" 
 
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
@@ -64,4 +64,3 @@ if prompt := st.chat_input("Type your question here..."):
                 st.markdown(response.text)
         except Exception as e:
             st.error(f"Sorry, I couldn't generate a response. Error: {e}")
-
