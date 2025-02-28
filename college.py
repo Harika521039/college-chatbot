@@ -24,7 +24,7 @@ df['Answer'] = df['Answer'].str.lower()
 vectorizer = TfidfVectorizer()
 question_vectors = vectorizer.fit_transform(df['Question'])
 
-API_KEY = "" 
+API_KEY ="AIzaSyBZnlpanyhyGnfEyi4XNTCAj2ledAi_1PI"
 
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
